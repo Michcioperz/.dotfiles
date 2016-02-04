@@ -3,3 +3,5 @@
 	name = Michał Sidor (Michcioperz)
 [push]
 	default = simple
+[core]
+	editor = vim

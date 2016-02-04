@@ -17,6 +17,8 @@ compinit
 HISTFILE=~/.histfile
 HISTSIZE=10000
 SAVEHIST=100000
+VISUAL=/usr/bin/vim
+EDITOR=/usr/bin/vim
 setopt appendhistory beep extendedglob nomatch
 unsetopt autocd notify
 bindkey -e
