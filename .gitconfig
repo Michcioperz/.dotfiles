@@ -5,3 +5,7 @@
 	default = simple
 [core]
 	editor = vim
+[color]
+	ui = true
+[help]
+	autocorrect = 50
