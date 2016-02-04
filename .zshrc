@@ -24,8 +24,14 @@ autoload -U colors
 colors
 autoload -Uz promptinit
 promptinit
-PROMPT="%B%F{yellow}%K{yellow}%{█▓▒░%}%B%F{white}%K{yellow}%n@%m:/dev/%y%b%F{red}%K{yellow}%{░▒▓█%}%b%F{red}%K{black}%{█▓▒░%}%B%F{white}%K{black} %D{%a %b %d %H:%M:%S} 
-%{%}%B%F{yellow}%K{black}%~/%b%f%k "
+case $HOST in
+  (LELEI) PROMPT="%B%F{cyan}%K{cyan}%{█▓▒░%}%B%F{white}%K{cyan}%n@%m:/dev/%y%b%F{cyan}%K{cyan}%{░▒▓█%}%b%F{cyan}%K{black}%{█▓▒░%}%B%F{white}%K{black} %D{%a %b %d %H:%M:%S} 
+%{%}%B%F{cyan}%K{black}%~/%b%f%k ";;
+  (mayushii) PROMPT="%B%F{blue}%K{blue}%{█▓▒░%}%B%F{white}%K{blue}%n@%m:/dev/%y%b%F{blue}%K{blue}%{░▒▓█%}%b%F{blue}%K{black}%{█▓▒░%}%B%F{white}%K{black} %D{%a %b %d %H:%M:%S} 
+%{%}%B%F{blue}%K{black}%~/%b%f%k ";;
+  (*) PROMPT="%B%F{yellow}%K{yellow}%{█▓▒░%}%B%F{white}%K{yellow}%n@%m:/dev/%y%b%F{red}%K{yellow}%{░▒▓█%}%b%F{red}%K{black}%{█▓▒░%}%B%F{white}%K{black} %D{%a %b %d %H:%M:%S} 
+%{%}%B%F{yellow}%K{black}%~/%b%f%k ";;
+esac
 setopt completealiases
 [ -d $HOME/.nvm ] && . "$HOME/.nvm/nvm.sh"
 alias ls="ls --color=auto"
