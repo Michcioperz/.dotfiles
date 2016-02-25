@@ -27,7 +27,7 @@ colors
 autoload -Uz promptinit
 promptinit
 case $HOST in
-  (LELEI) PROMPT="%B%F{cyan}%K{cyan}%{█▓▒░%}%B%F{white}%K{cyan}%n@%m:/dev/%y%b%F{cyan}%K{cyan}%{░▒▓█%}%b%F{cyan}%K{black}%{█▓▒░%}%B%F{white}%K{black} %D{%a %b %d %H:%M:%S} 
+  (lelei) PROMPT="%B%F{cyan}%K{cyan}%{█▓▒░%}%B%F{white}%K{cyan}%n@%m:/dev/%y%b%F{cyan}%K{cyan}%{░▒▓█%}%b%F{cyan}%K{black}%{█▓▒░%}%B%F{white}%K{black} %D{%a %b %d %H:%M:%S} 
 %{%}%B%F{cyan}%K{black}%~/%b%f%k ";;
   (mayushii) PROMPT="%B%F{blue}%K{blue}%{█▓▒░%}%B%F{white}%K{blue}%n@%m:/dev/%y%b%F{blue}%K{blue}%{░▒▓█%}%b%F{blue}%K{black}%{█▓▒░%}%B%F{white}%K{black} %D{%a %b %d %H:%M:%S} 
 %{%}%B%F{blue}%K{black}%~/%b%f%k ";;
