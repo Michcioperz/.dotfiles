@@ -43,10 +43,16 @@ alias egrep="egrep --color=auto"
 alias zshrc="vim $HOME/.zshrc"
 alias vimrc="vim $HOME/.vimrc"
 alias resource="source $HOME/.zshrc"
-alias mpdc="export MPD_HOST=/run/mpd/socket"
-alias mopidyc="export MPD_HOST=mayushii MPD_PORT=6601"
+alias mpdc="MPD_HOST=/run/mpd/socket"
+alias mpdup="systemctl start mpd mpdscribble"
+alias mpddown="systemctl stop mpd mpdscribble"
+alias mopidyc="MPD_HOST=mayushii MPD_PORT=6601"
+alias mopidyup="systemctl start mopidy"
+alias mopidydown="systemctl stop mopidy"
+alias ncmpcpp="pasuspender ncmpcpp"
 [[ -n "${key[PageUp]}" ]] && bindkey "${key[PageUp]}" history-beginning-search-backward
 [[ -n "${key[PageDown]}" ]] && bindkey "${key[PageDown]}" history-beginning-search-forward
 [ -d $HOME/torch ] && . $HOME/torch/install/bin/torch-activate
+[ -d $HOME/android-sdk-linux ] && export ANDROID_HOME="$HOME/android-sdk-linux" PATH="$ANDROID_HOME/tools:$PATH"
 [ -d /usr/local/heroku ] && export PATH="/usr/local/heroku/bin:$PATH"
 [ -f $HOME/.travis/travis.sh ] && source $HOME/.travis/travis.sh
