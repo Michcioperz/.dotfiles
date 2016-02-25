@@ -49,7 +49,6 @@ alias mpddown="systemctl stop mpd mpdscribble"
 alias mopidyc="MPD_HOST=mayushii MPD_PORT=6601"
 alias mopidyup="systemctl start mopidy"
 alias mopidydown="systemctl stop mopidy"
-alias ncmpcpp="pasuspender ncmpcpp"
 [[ -n "${key[PageUp]}" ]] && bindkey "${key[PageUp]}" history-beginning-search-backward
 [[ -n "${key[PageDown]}" ]] && bindkey "${key[PageDown]}" history-beginning-search-forward
 [ -d $HOME/torch ] && . $HOME/torch/install/bin/torch-activate
