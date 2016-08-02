@@ -17,8 +17,7 @@ compinit
 HISTFILE=~/.histfile
 HISTSIZE=10000
 SAVEHIST=100000
-VISUAL=/usr/bin/vim
-EDITOR=/usr/bin/vim
+export VISUAL=$(which vim) EDITOR=$(which vim)
 setopt appendhistory beep extendedglob nomatch
 unsetopt autocd notify
 bindkey -e
@@ -49,9 +48,16 @@ alias mpddown="systemctl stop mpd mpdscribble"
 alias mopidyc="MPD_HOST=mayushii MPD_PORT=6601"
 alias mopidyup="systemctl start mopidy"
 alias mopidydown="systemctl stop mopidy"
+[[ -n "${key[Home]}" ]] && bindkey "${key[Home]}" beginning-of-line
+[[ -n "${key[End]}" ]] && bindkey "${key[End]}" end-of-line
 [[ -n "${key[PageUp]}" ]] && bindkey "${key[PageUp]}" history-beginning-search-backward
 [[ -n "${key[PageDown]}" ]] && bindkey "${key[PageDown]}" history-beginning-search-forward
 [ -d $HOME/torch ] && . $HOME/torch/install/bin/torch-activate
 [ -d $HOME/android-sdk-linux ] && export ANDROID_HOME="$HOME/android-sdk-linux" PATH="$ANDROID_HOME/tools:$PATH"
 [ -d /usr/local/heroku ] && export PATH="/usr/local/heroku/bin:$PATH"
+[ -f $HOME/.travis/travis.sh ] && source $HOME/.travis/travis.sh
+[ -d $HOME/.config/composer ] && export PATH="$HOME/.config/composer/vendor/bin:$PATH"
+[ -d $HOME/.composer ] && export PATH="$HOME/.composer/vendor/bin:$PATH"
+[ -d $HOME/.config/itch ] && export PATH="$HOME/.config/itch/bin:$PATH"
+export PATH="$(ruby -e 'print Gem.user_dir')/bin:$PATH"
 [ -f $HOME/.travis/travis.sh ] && source $HOME/.travis/travis.sh

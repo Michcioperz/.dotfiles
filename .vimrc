@@ -1,4 +1,4 @@
-set background=dark
+set background=light
 set nocompatible
 filetype off
 syntax on
