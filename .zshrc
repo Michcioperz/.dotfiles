@@ -34,7 +34,9 @@ case $HOST in
 %{%}%B%F{yellow}%K{black}%~/%b%f%k ";;
 esac
 setopt completealiases
-[ -d $HOME/.nvm ] && . "$HOME/.nvm/nvm.sh"
+nvmm() {
+	[ -d $HOME/.nvm ] && . "$HOME/.nvm/nvm.sh"
+}
 alias ls="ls --color=auto"
 alias grep="grep --color=auto"
 alias fgrep="fgrep --color=auto"
