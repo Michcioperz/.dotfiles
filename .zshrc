@@ -70,3 +70,4 @@ alias shiraishi="ssh root@217.61.16.163"
 export PATH="$(ruby -e 'print Gem.user_dir')/bin:$PATH"
 [ -f $HOME/.travis/travis.sh ] && source $HOME/.travis/travis.sh
 [ -f $HOME/.zshrc.local ] && source $HOME/.zshrc.local
+[ -d $HOME/.linuxbrew ] && export PATH="$HOME/.linuxbrew/bin:$PATH" MANPATH="$HOME/.linuxbrew/share/man:$MANPATH" INFOPATH="$HOME/.linuxbrew/share/info:$INFOPATH"
