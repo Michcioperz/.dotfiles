@@ -50,16 +50,22 @@ alias mpddown="systemctl stop mpd mpdscribble"
 alias mopidyc="MPD_HOST=mayushii MPD_PORT=6601"
 alias mopidyup="systemctl start mopidy"
 alias mopidydown="systemctl stop mopidy"
+alias aoba="ssh aoba.at.michcioperz.space -p 222"
+alias shiori="ssh shiori.at.michcioperz.space"
+alias miyano="ssh miyano.staszic.space"
+alias shiraishi="ssh root@217.61.16.163"
 [[ -n "${key[Home]}" ]] && bindkey "${key[Home]}" beginning-of-line
 [[ -n "${key[End]}" ]] && bindkey "${key[End]}" end-of-line
 [[ -n "${key[PageUp]}" ]] && bindkey "${key[PageUp]}" history-beginning-search-backward
 [[ -n "${key[PageDown]}" ]] && bindkey "${key[PageDown]}" history-beginning-search-forward
 [ -d $HOME/torch ] && . $HOME/torch/install/bin/torch-activate
+[ -d /opt/android-sdk ] && export ANDROID_HOME="/opt/android-sdk" PATH="$ANDROID_HOME/build-tools:$ANDROID_HOME/platform-tools:$ANDROID_HOME/tools:$PATH"
 [ -d $HOME/android-sdk-linux ] && export ANDROID_HOME="$HOME/android-sdk-linux" PATH="$ANDROID_HOME/build-tools:$ANDROID_HOME/platform-tools:$ANDROID_HOME/tools:$PATH"
 [ -d /usr/local/heroku ] && export PATH="/usr/local/heroku/bin:$PATH"
 [ -f $HOME/.travis/travis.sh ] && source $HOME/.travis/travis.sh
 [ -d $HOME/.config/composer ] && export PATH="$HOME/.config/composer/vendor/bin:$PATH"
 [ -d $HOME/.composer ] && export PATH="$HOME/.composer/vendor/bin:$PATH"
+[ -d /opt/pin ] && export PATH="$PATH:/opt/pin"
 [ -d $HOME/.config/itch ] && export PATH="$HOME/.config/itch/bin:$PATH"
 export PATH="$(ruby -e 'print Gem.user_dir')/bin:$PATH"
 [ -f $HOME/.travis/travis.sh ] && source $HOME/.travis/travis.sh
