@@ -1,0 +1,98 @@
+[colors]
+bg = #1C2454
+alert = #3F51BF
+blue = #8C9CA4
+
+[global/wm]
+margin-top = 5
+margin-bottom = 5
+
+[bar/majesty]
+width = 100%
+height = 27
+offset-x = 0
+offset-y = 0
+background = ${colors.bg}
+foreground = ${colors.blue}
+font-0 = Lato:pixelsize=15:weight=light
+font-1 = fixed:pixelsize=15
+modules-left = i3
+modules-right = cpu wlan eth memory temperature backlight volume battery date
+
+[module/mpd]
+type = internal/mpd
+host = 127.0.0.1
+port = 6600
+interval = 2
+format-online = <bar-progress> <label-song>
+label-song = %title%
+label-song-active-font = 1
+bar-progress-width = 20
+bar-progress-indicator = i
+bar-progress-fill = I
+bar-progress-empty = .
+
+[module/i3]
+type = internal/i3
+format = <label-state>
+strip-wsnumbers = true
+label-focused-foreground = ${colors.bg}
+label-focused-background = ${colors.blue}
+label-urgent-background = ${colors.alert}
+label-urgent-foreground = ${colors.blue}
+
+[module/backlight]
+type = internal/backlight
+card = intel_backlight
+label = lit %percentage%
+format-padding = 1
+
+[module/cpu]
+type = internal/cpu
+format-padding = 1
+label = %{T-}CPU %{T2}%percentage-cores%%{T-}
+
+[module/memory]
+type = internal/memory
+label = MEM %gb_free%
+format-padding = 1
+
+[module/wlan]
+type = internal/network
+interface = wifishii
+label-connected = %essid% <%downspeed%> %local_ip%
+format-padding = 1
+interval = 3.0
+
+[module/eth]
+type = internal/network
+interface = ethershii
+label-connected = %ifname% <%downspeed%> %local_ip%
+format-padding = 1
+interval = 3.0
+
+[module/date]
+type = internal/date
+date = %Y-%m-%d
+time = %H:%M
+label = %date% %time%
+format-padding = 1
+
+[module/battery]
+battery = BAT1
+adapter = ACAD
+type = internal/battery
+label-charging = ^ %percentage%
+format-padding = 1
+label-full = []
+label-discharging = v %percentage%
+
+[module/temperature]
+type = internal/temperature
+warn-temperature = 50
+format-padding = 1
+
+[module/volume]
+type = internal/volume
+format-volume = <label-volume> )))
+format-padding = 1
