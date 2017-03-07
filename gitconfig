@@ -1,0 +1,11 @@
+[user]
+	email = public+git@meekchopp.es
+	name = Michał Sidor (Michcioperz)
+[push]
+	default = simple
+[core]
+	editor = vim
+[color]
+	ui = true
+[help]
+	autocorrect = 50

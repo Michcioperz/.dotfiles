@@ -1,0 +1,5 @@
+data.location=~/tasks
+
+include /usr/share/doc/task/rc/solarized-dark-256.theme
+urgency.user.project.Pomysły.coefficient=-0.5
+urgency.user.project.Szkoła.Fizyka.coefficient=0.5
