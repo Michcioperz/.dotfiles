@@ -23,6 +23,7 @@ zle -N down-line-or-beginning-search
 bindkey "^[[A" up-line-or-beginning-search
 bindkey "^[[B" down-line-or-beginning-search
 
+export VISUAL=vim EDITOR=vim
 
 alias ls="ls --color=auto"
 alias grep="grep --color=auto"
@@ -33,13 +34,13 @@ alias tanaka="ssh staszic.space"
 
 [ -n "$XDG_CONFIG_HOME" ] && export XDG_CONFIG_HOME="$HOME/.config"
 
-
+[ -d $HOME/.local/bin ] && export PATH="$HOME/.local/bin:$PATH"
 [ -d $HOME/torch ] && source $HOME/torch/install/bin/torch-activate
 [ -d /opt/android-sdk ] && export ANDROID_HOME="/opt/android-sdk"
 [ -d $HOME/android-sdk-linux ] && export ANDROID_HOME="$HOME/android-sdk-linux"
 [ -n $ANDROID_HOME ] && export PATH="$ANDROID_HOME/build-tools:$ANDROID_HOME/platform-tools:$ANDROID_HOME/tools:$PATH"
 [ -d /usr/local/heroku ] && export PATH="/usr/local/heroku/bin:$PATH"
-[ -d $XDG_CONFIG_HOME/itch ] && export PATH="$XDG_CONFIG_HOME/itch/bin:$PATH"
+[ -d $XDG_CONFIG_HOME/itch/bin ] && export PATH="$XDG_CONFIG_HOME/itch/bin:$PATH"
 [ -n "$(which gem)" ] && export PATH="$(ruby -e 'print Gem.user_dir'):$PATH"
 [ -f $HOME/.zshrc.local ] && source $HOME/.zshrc.local
 [ -d $HOME/.cargo/bin ] && export PATH="$HOME/.cargo/bin:$PATH"
