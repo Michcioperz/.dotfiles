@@ -32,6 +32,8 @@ alias aoba="ssh aoba.meekchopp.es"
 alias shiraishi="ssh shiraishi.meekchopp.es"
 alias tanaka="ssh staszic.space"
 
+export VISUAL=vim EDITOR=vim
+
 [ -n "$XDG_CONFIG_HOME" ] && export XDG_CONFIG_HOME="$HOME/.config"
 
 [ -d $HOME/.local/bin ] && export PATH="$HOME/.local/bin:$PATH"
