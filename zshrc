@@ -31,6 +31,7 @@ alias grep="grep --color=auto"
 alias aoba="ssh aoba.meekchopp.es"
 alias shiraishi="ssh shiraishi.meekchopp.es"
 alias tanaka="ssh staszic.space"
+alias megumin="ssh megumin.meekchopp.es"
 
 export VISUAL=vim EDITOR=vim
 
