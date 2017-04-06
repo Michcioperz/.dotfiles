@@ -1,3 +1,6 @@
 [submodule "solarized_xresources"]
 	path = solarized_xresources
 	url = git://github.com/solarized/xresources.git
+[submodule "neofetch"]
+	path = neofetch
+	url = git://github.com/dylanaraps/neofetch.git
