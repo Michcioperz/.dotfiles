@@ -28,10 +28,10 @@ export VISUAL=vim EDITOR=vim
 alias ls="ls --color=auto"
 alias grep="grep --color=auto"
 
-alias aoba="ssh aoba.meekchopp.es"
-alias shiraishi="ssh shiraishi.meekchopp.es"
-alias tanaka="ssh staszic.space"
-alias megumin="ssh megumin.meekchopp.es"
+alias aoba="ssh michcioperz@aoba.meekchopp.es"
+alias shiraishi="ssh michcioperz@shiraishi.meekchopp.es"
+alias tanaka="ssh michcioperz@staszic.space"
+alias megumin="ssh michcioperz@megumin.meekchopp.es"
 
 export VISUAL=vim EDITOR=vim
 
@@ -44,9 +44,11 @@ export VISUAL=vim EDITOR=vim
 [ -n $ANDROID_HOME ] && export PATH="$ANDROID_HOME/build-tools:$ANDROID_HOME/platform-tools:$ANDROID_HOME/tools:$PATH"
 [ -d /usr/local/heroku ] && export PATH="/usr/local/heroku/bin:$PATH"
 [ -d $XDG_CONFIG_HOME/itch/bin ] && export PATH="$XDG_CONFIG_HOME/itch/bin:$PATH"
-[ -n "$(which gem)" ] && export PATH="$(ruby -e 'print Gem.user_dir'):$PATH"
-[ -f $HOME/.zshrc.local ] && source $HOME/.zshrc.local
+[ -n "$(which gem)" ] && export PATH="$(ruby -e 'print Gem.user_dir')/bin:$PATH"
 [ -d $HOME/.cargo/bin ] && export PATH="$HOME/.cargo/bin:$PATH"
+
+
+[ -f $HOME/.zshrc.local ] && source $HOME/.zshrc.local
 
 
 neofetch --disable packages
