@@ -102,8 +102,7 @@ bindsym $mod+Shift+minus move scratchpad
 
 
 
-
-exec --no-startup-id nitrogen --restore
+exec --no-startup-id ~/.fehbg
 exec --no-startup-id polybar majesty
 exec --no-startup-id dunst
 exec --no-startup-id compton --blur-background --blur-background-frame

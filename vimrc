@@ -20,6 +20,7 @@ Plugin 'leafgarland/typescript-vim'
 Plugin 'cespare/vim-toml'
 Plugin 'pangloss/vim-javascript'
 Plugin 'othree/html5.vim'
+Plugin 'wannesm/wmgraphviz.vim'
 call vundle#end()
 colorscheme solarized
 " }}}
