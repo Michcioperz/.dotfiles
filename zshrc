@@ -32,6 +32,8 @@ alias aoba="ssh michcioperz@aoba.meekchopp.es"
 alias shiraishi="ssh michcioperz@shiraishi.meekchopp.es"
 alias tanaka="ssh michcioperz@staszic.space"
 alias megumin="ssh michcioperz@megumin.meekchopp.es"
+alias mimuwsrv="ssh ms394731@students.mimuw.edu.pl"
+alias faris="ssh -p 522 michcioperz@faris.wolf480.pl"
 
 export VISUAL=vim EDITOR=vim
 
