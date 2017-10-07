@@ -44,7 +44,7 @@ label-urgent-foreground = ${colors.blue}
 [module/backlight]
 type = internal/backlight
 card = intel_backlight
-label = lit %percentage%
+label = lit %percentage%%
 format-padding = 1
 
 [module/cpu]
@@ -82,7 +82,7 @@ format-padding = 1
 battery = BAT1
 adapter = ACAD
 type = internal/battery
-label-charging = ^ %percentage%
+label-charging = ^ %percentage%%
 format-padding = 1
 label-full = []
 label-discharging = v %percentage%
